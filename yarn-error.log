@@ -1,0 +1,53 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js build
+
+PATH: 
+  C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\GIT\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\TortoiseGit\bin;C:\Users\jibang.jia\AppData\Local\Microsoft\WindowsApps;C:\VSCODE\Microsoft VS Code\bin;C:\Program Files\nodejs\node_global;C:\Users\jibang.jia\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.17.5
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\material\Rollup+Esbuild\rollupVue\package.json: Unexpected token / in JSON at position 203
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+      "name": "rollup",
+      "version": "1.0.0",
+      "description": "",
+      "main": "lib/rollupVue.cjs.js",
+      "module": "lib/rollupVue.esm.js",
+      "scripts": {
+          "build": "rollup -c -w",
+          // -f。-f参数是--format的缩写，它表示生成代码的格式，amd表示采用AMD标准，cjs为CommonJS标准，esm（或 es）为ES模块标准。-f的值可以为amd、cjs、system、esm（'es’也可以）、iife或umd中的任何一个。
+  
+          // -o。-o指定了输出的路径，这里我们将打包后的文件输出到dist目录下的bundle.js
+  
+          // rollup sc/index.ts -f umd -o  lib/rollupVue.cjs.js
+  
+          // -c。指定rollup的配置文件。
+  
+          // -w。监听源文件是否有改动，如果有改动，重新打包
+          "build:type": "tsc -p ./tsconfig.type.json",
+          "test": "jest --no-cache"
+      },
+      "author": "",
+      "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
